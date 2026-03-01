@@ -1,0 +1,35 @@
+.car-item {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.39);
+  padding: 10px;
+  margin: 10px;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+}
+
+.car-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.sell-btn {
+  background-color: #357ddc;
+  color: #fff;
+}
+
+.sell-btn:hover {
+  background-color: #354edc;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.remove-btn:hover {
+  background-color: #bb2d3b;
+}
