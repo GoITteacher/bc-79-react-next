@@ -1,0 +1,244 @@
+.page {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4.5rem) 1.5rem;
+}
+
+.page > header {
+  padding: clamp(2.5rem, 6vw, 5rem);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(
+      500px 260px at 20% 10%,
+      rgba(255, 255, 255, 0.8),
+      transparent 65%
+    ),
+    linear-gradient(135deg, var(--paper-soft), var(--paper));
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.page > header p:first-of-type {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-pill);
+  background: var(--paper-card-alt);
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.page > header div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.page > header button:first-child {
+  background: var(--accent);
+  color: #fff;
+}
+
+.page > header button:first-child:hover {
+  background: var(--accent-deep);
+}
+
+.page section {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.page section + section {
+  border-top: 2px dashed rgba(27, 26, 26, 0.2);
+}
+
+.page article,
+.page form,
+.page details {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-md);
+  padding: clamp(1.2rem, 2.4vw, 2rem);
+  background: var(--paper-card);
+  box-shadow: var(--shadow);
+}
+
+.page details + details {
+  margin-top: 1rem;
+}
+
+.page section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page section > p {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+}
+
+.page ol {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  padding-left: 1.4rem;
+}
+
+.page ul {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+}
+
+.page section > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.page article {
+  display: grid;
+  gap: 0.6rem;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.page article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(27, 26, 26, 0.2);
+}
+
+.page form {
+  max-width: 520px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.page label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.page details {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.page summary::-webkit-details-marker {
+  display: none;
+}
+
+.page details[open] summary {
+  color: var(--accent-deep);
+}
+
+.page details p {
+  margin-top: 0.6rem;
+}
+
+.page section:last-of-type {
+  text-align: center;
+}
+
+.page section:last-of-type button {
+  margin-top: 1rem;
+  background: var(--teal);
+  color: #fff;
+}
+
+.page section:last-of-type button:hover {
+  background: #256a6a;
+}
+
+.whyNext {
+  margin: 0 auto;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(
+      420px 220px at 15% 15%,
+      rgba(255, 255, 255, 0.8),
+      transparent 60%
+    ),
+    linear-gradient(160deg, var(--paper-soft), var(--paper-warm));
+  padding: clamp(2rem, 5vw, 3.5rem);
+  box-shadow: var(--shadow);
+}
+
+.whyNext h2 {
+  text-align: left;
+}
+
+.whyNext ul {
+  margin: 1rem 0 0;
+  padding-left: 3rem;
+}
+
+.whyNext li {
+  position: relative;
+  padding-left: 0.6rem;
+}
+
+.whyNext li::marker {
+  color: var(--accent);
+}
+
+.howNext {
+  margin: 20px auto;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(
+      420px 220px at 85% 15%,
+      rgba(255, 255, 255, 0.8),
+      transparent 60%
+    ),
+    linear-gradient(200deg, var(--paper-light), var(--paper));
+  padding: clamp(2rem, 5vw, 3.5rem);
+  box-shadow: var(--shadow);
+}
+
+.howNext h2 {
+  text-align: left;
+}
+
+.howNext ol {
+  margin: 1rem 0 0;
+  padding-left: 3rem;
+}
+
+.howNext li::marker {
+  color: var(--teal);
+}
+
+@media (max-width: 720px) {
+  .page > header {
+    text-align: left;
+  }
+
+  .page > header div {
+    justify-content: flex-start;
+  }
+
+  .page section h2 {
+    text-align: left;
+  }
+
+  .page section > p {
+    text-align: left;
+    margin-left: 0;
+  }
+}
