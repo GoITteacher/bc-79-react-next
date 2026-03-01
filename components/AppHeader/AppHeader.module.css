@@ -1,0 +1,81 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brandMark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #0ea5e9;
+}
+
+.brandName {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.brandTag {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.navLink {
+  color: #0f172a;
+  font-weight: 600;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.navLink:hover {
+  background: #f7fafc;
+}
+
+.auth {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.authLink {
+  border-radius: 0.55rem;
+  padding: 0.45rem 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  border: 1px solid transparent;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.primary {
+  background: #0ea5e9;
+  color: #fff;
+  border-color: transparent;
+}
+
+.authLink:hover {
+  border-color: #cbd5f5;
+  background: #f8fafc;
+}

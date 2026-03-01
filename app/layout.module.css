@@ -1,0 +1,13 @@
+.body {
+  min-height: 100vh;
+  background: #fbfbfb;
+  color: #0f172a;
+}
+
+.pageFrame {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3.5rem;
+  position: relative;
+  z-index: 1;
+}

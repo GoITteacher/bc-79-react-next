@@ -1,0 +1,213 @@
+.page {
+  min-height: 100vh;
+  background: #f7f8fb;
+  color: #0f172a;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #64748b;
+  gap: 0.35rem;
+}
+
+.heroCopy h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  color: #0f172a;
+}
+
+.heroCopy p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton,
+.cardLink {
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.4rem;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.primaryButton {
+  background: #0f172a;
+  color: #fff;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #0f172a;
+  border-color: #cbd5f5;
+}
+
+.ctaGroup a:hover {
+  opacity: 0.85;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.stat {
+  background: #ffffff;
+  border-radius: 0.9rem;
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.statLabel {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.gridSection,
+.previewSection {
+  background: transparent;
+  border-radius: 1rem;
+  padding: 0;
+}
+
+.gridHeader h2,
+.previewHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.gridHeader p,
+.previewHeader p {
+  margin: 0.3rem 0 1rem;
+  color: #475569;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 25px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.badge {
+  display: inline-flex;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #64748b;
+  gap: 0.35rem;
+}
+
+.cardLink {
+  margin-top: auto;
+  color: #0f172a;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.cardDescription {
+  margin: 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.previewList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.previewItem {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.previewItem h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.previewItem p {
+  margin: 0;
+  color: #475569;
+}
+
+.previewTag {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.75rem;
+  }
+
+  .main {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+  }
+}
