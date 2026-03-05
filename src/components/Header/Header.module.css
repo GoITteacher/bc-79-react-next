@@ -1,2 +1,21 @@
-.logo {
+.header {
+  padding: 1.25rem 1.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4c1d95, #2563eb);
+  color: #f8fafc;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.35);
+}
+
+.brand {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(248, 250, 252, 0.9);
+  opacity: 0.9;
 }

@@ -1,11 +1,5 @@
-/**
- * React + TypeScript: типізація списків і пропсів.
- * Завдання:
- * 1) Додай тип для масиву books замість неявного any.
- * 2) Пропсах BookItem зафіксуй типи name/author.
- * 3) Додай key у map і тип для book всередині ітерації.
- */
 import BookItem from "../BookItem/BookItem";
+import css from "./Container.module.css";
 
 const books = [
   { name: "Vasya", author: "Petro" },
@@ -17,11 +11,20 @@ const books = [
 
 const Container = () => {
   return (
-    <div>
-      {books.map((book, index) => (
-        <BookItem key={index} name={book.name} author={book.author} />
-      ))}
-    </div>
+    <section className={css.section}>
+      <div className={css.heading}>
+        <p className={css.overline}>Колекція</p>
+        <h2 className={css.title}>Список книжок</h2>
+        <p className={css.subtitle}>
+          Обирайте, що читати цього тижня — все акуратно розкладено для швидкого перегляду.
+        </p>
+      </div>
+      <div className={css.list}>
+        {books.map((book, index) => (
+          <BookItem key={`${book.name}-${index}`} name={book.name} author={book.author} />
+        ))}
+      </div>
+    </section>
   );
 };
 

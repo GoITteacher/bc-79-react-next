@@ -1,14 +1,15 @@
 import AboutUs from "./AboutUs/AboutUs";
 import Hero from "./Hero/Hero";
 import Reviews from "./Reviews/Reviews";
+import css from "./MainSection.module.css";
 
 const MainSection = () => {
   return (
-    <div>
+    <section className={css.wrapper}>
       <Hero />
       <AboutUs />
       <Reviews />
-    </div>
+    </section>
   );
 };
 

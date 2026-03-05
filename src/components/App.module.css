@@ -1,0 +1,21 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem clamp(0.75rem, 2vw, 2.5rem);
+  background: transparent;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) 1fr minmax(240px, 320px);
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 1100px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}

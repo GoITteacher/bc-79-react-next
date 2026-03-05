@@ -1,17 +1,19 @@
-/**
- * Завдання: додати типізацію пропсів книги (name, author).
- * Поки що пропси не мають типу — додайте інтерфейс або type і використайте його.
- */
 import css from "./BookItem.module.css";
 
-const BookItem = (props) => {
-  const { name, author } = props;
+type BookItemProps = {
+  name: string;
+  author: string;
+};
 
+const BookItem = ({ name, author }: BookItemProps) => {
   return (
-    <div className={css["bookItem"]}>
-      <p>Title: {name}</p>
-      <p>Author: {author}</p>
-    </div>
+    <article className={css.bookItem}>
+      <span className={css.indicator} aria-hidden="true" />
+      <div className={css.details}>
+        <p className={css.title}>{name}</p>
+        <p className={css.author}>Автор: {author}</p>
+      </div>
+    </article>
   );
 };
 

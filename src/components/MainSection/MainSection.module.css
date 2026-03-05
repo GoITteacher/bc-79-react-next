@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero,
+.card {
+  border-radius: 18px;
+  padding: 1.35rem 1.5rem;
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+}
+
+.hero {
+  background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.2), transparent 60%)
+    #f8fafc;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroText {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.cardText {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}

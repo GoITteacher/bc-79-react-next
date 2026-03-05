@@ -1,0 +1,36 @@
+.bookItem {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+}
+
+.indicator {
+  width: 0.4rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #a855f7, #6366f1);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.author {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #475569;
+}
