@@ -1,0 +1,230 @@
+{
+  "Redux Slice Template": {
+    "prefix": "react-redux-slice",
+    "body": [
+      "import { createSlice } from \"@reduxjs/toolkit\";",
+      "const initialState = {}",
+      "",
+      "export const slice${1:Name} = createSlice({",
+      "  name: \"${1:Name}\",",
+      "  initialState,",
+      "  reducers: {",
+      "    reducer1(state, {payload: userData}) {},",
+      "    reducer2(state, {payload: userData}) {},",
+      "    reducer3(state, {payload: userData}) {},",
+      "    reducer4: {",
+      "      reducer(state, {payload: userData}) {},",
+      "      prepare(userData) {},",
+      "    },",
+      "  },",
+      "});",
+      "",
+      "export const { reducer1, reducer2, reducer3 } = slice${1:Name}.actions;",
+      "export default slice${1:Name}.reducer;"
+    ],
+    "description": "Template for creating a Redux slice using createSlice from @reduxjs/toolkit"
+  },
+  "React-Redux Configure Store": {
+    "prefix": "react-configure-store",
+    "body": [
+      "import { configureStore } from \"@reduxjs/toolkit\";",
+      "import reducer from \"./location/slice\";",
+      "export default configureStore({",
+      "  reducer: {reducerName: reducer,",
+      "  reducerName: reducer,",
+      "  reducerName: reducer,}",
+      "});"
+    ],
+    "description": "React Configure Store"
+  },
+  "React Fetch GET Axios": {
+    "prefix": "react-api-get",
+    "body": [
+      "export const fetchGet = createAsyncThunk(\"name/fetchName\",",
+      "async (_, thunkAPI) => {",
+      "   const BASE_URL = \"\";",
+      "   const END_POINT = \"\";",
+      "   const url = BASE_URL + END_POINT;",
+      "",
+      "   const params = {};",
+      "   const headers = {};",
+      "",
+      "   try {",
+      "     const response = await axios.get(url, { params, headers });",
+      "     return response.data;",
+      "   } catch (e) {",
+      "     return thunkAPI.rejectWithValue(e.message);",
+      "   }",
+      "}",
+      ");"
+    ],
+    "description": "Create Axios Fetch (GET) Function"
+  },
+  "React Fetch POST Axios": {
+    "prefix": "react-api-post",
+    "body": [
+      "export const fetchPost = createAsyncThunk(",
+      "'name/fetchPost',",
+      "async (userData, thunkAPI) => {",
+      "   const BASE_URL = '';",
+      "   const END_POINT = '';",
+      "   const url = BASE_URL + END_POINT;",
+      "   const params = {};",
+      "   const headers = {};",
+      "   try {",
+      "   const response = await axios.post(url, userData, { params, headers });",
+      "   return response.data;",
+      "   } catch (e) {",
+      "   return thunkAPI.rejectWithValue(e.message);",
+      "   }",
+      "},",
+      ");"
+    ],
+    "description": "Create Axios Fetch (POST) Function"
+  },
+  "Lazy Loaded Routes with Suspense": {
+    "prefix": "react-routes",
+    "body": [
+      "const MyComponent = lazy(() => import('${1:path/to/MyComponent}'));",
+      "<Suspense fallback={<div>Loading...</div>}>",
+      "  <Routes>",
+      "    <Route path=\"/path1\" element={<MyComponent />} />",
+      "    <Route path=\"/path2\" element={<MyComponent />}>",
+      "      <Route path=\"pathin1\" element={<MyComponent />} />",
+      "      <Route path=\"pathin2\" element={<MyComponent />} />",
+      "      <Route path=\"pathin3\" element={<MyComponent />} />",
+      "    </Route>",
+      "    <Route path=\"/path3\" element={<MyComponent />} />",
+      "    <Route path=\"/path4\" element={<MyComponent />} />",
+      "  </Routes>",
+      "</Suspense>"
+    ],
+    "description": "Lazy Loaded Routes with Suspense in React"
+  },
+  "React Extra Reducer": {
+    "prefix": "react-extra-reducer",
+    "body": [
+      " const handlePending = (state)=>{",
+      "    state.isLoading = true;",
+      "    state.error = null;",
+      "}",
+      "const handleRejected = (state, {payload})=>{",
+      "    state.isLoading = false;",
+      "    state.error = payload;",
+      "}",
+      "",
+      "",
+      "",
+      "",
+      "extraReducers: builder => {",
+      "   builder",
+      "     .addCase(fetchData.fulfilled, (state, {payload: userData}) => {",
+      "       state.isLoading = false;",
+      "       state.error = null;",
+      "       state.items = userData;",
+      "     })",
+      "     .addCase(fetchData.pending, handlePending)",
+      "     .addCase(fetchData.rejected, handleRejected);",
+      "},"
+    ],
+    "description": "Create React Extra Reducer For Async Redux"
+  },
+  "React Array Render": {
+    "prefix": "react-array-render",
+    "body": [
+      "<ul>{array.map((item, i) => {",
+      "   return <li key={i}>",
+      "      <UserElement data={item}/>",
+      "   </li>",
+      "})}</ul>"
+    ],
+    "description": "Create Render Array"
+  },
+  "React Fetch In Component": {
+    "prefix": "react-fetch-effect",
+    "body": [
+      "useEffect(() => {",
+      "   async function fetchData() {",
+      "      const data = await myFetchFunction();",
+      "      setData(data);",
+      "   }",
+      "   ",
+      "   fetchData();",
+      "}, []);"
+    ],
+    "description": "Create "
+  },
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import css from './${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.module.css';",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = () => {",
+      "  return (",
+      "    <div className={css['${TM_FILENAME_BASE/(.*)/${1:/camelcase}/}']}>",
+      "      ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};"
+    ],
+    "description": "React Functional Component"
+  },
+  "React Functional Component TS": {
+    "prefix": "rfct",
+    "body": [
+      "import css from './${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.module.css';",
+      "",
+      "interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props{",
+      "",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = ({}:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props) => {",
+      "  return (",
+      "    <div className={css['${TM_FILENAME_BASE/(.*)/${1:/camelcase}/}']}>",
+      "      ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};"
+    ],
+    "description": "React Functional Component TS"
+  },
+
+  "Use Dispatch with useEffect": {
+    "prefix": "react-redux-async-dispatch",
+    "body": [
+      "import { useDispatch } from 'react-redux';",
+      "import { userAction } from '../../redux/data/slice.js';",
+      "import { useEffect } from 'react';",
+      "",
+      "const dispatch = useDispatch();",
+      "useEffect(() => {",
+      "  dispatch(userAction(userData));",
+      "}, []);"
+    ],
+    "description": "Use dispatch with useEffect in React"
+  },
+  "Next Functional Component": {
+    "prefix": "nfc",
+    "body": [
+      "\"use client\"",
+      "import css from './${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.module.css';",
+      "",
+      "interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {}",
+      "",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = ({}:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props) => {",
+      "  return (",
+      "    <div className={css['${TM_FILENAME_BASE/(.*)/${1:/camelcase}/}']}>",
+      "      ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};"
+    ],
+    "description": "Next Functional Component"
+  }
+}
