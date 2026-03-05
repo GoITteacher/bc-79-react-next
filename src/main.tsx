@@ -1,7 +1,13 @@
 import { createRoot } from "react-dom/client";
 import App from "./components/App";
-import "./index.css";
+import { StrictMode } from "react";
+
+import "./styles/index.css";
+import "./styles/reset.css";
+import "./styles/variables.css";
 
 createRoot(document.querySelector("#root") as HTMLDivElement).render(
-  <App></App>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );

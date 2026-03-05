@@ -1,0 +1,11 @@
+.cocktail-card {
+  width: 344px;
+  border-radius: 16px;
+  padding: 8px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid silver;
+}
