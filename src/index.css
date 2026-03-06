@@ -29,19 +29,20 @@ body {
   min-height: 100vh;
 }
 
-div {
+/* div {
   margin: 5px;
   padding: 5px;
   display: flex;
   border-radius: 5px;
-}
-
+  flex-direction: column;
+} */
+/* 
 ul {
   display: flex;
   flex-wrap: wrap;
   border-radius: 10px;
   list-style-type: none;
-}
+} */
 
 h1 {
   font-size: 3.2em;
