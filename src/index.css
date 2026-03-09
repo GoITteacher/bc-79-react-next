@@ -1,18 +1,18 @@
 :root {
-  --page-background: #0b1320;
-  --card-background: rgba(15, 23, 42, 0.88);
-  --panel-background: rgba(255, 255, 255, 0.06);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --text-primary: #f8fafc;
-  --text-muted: rgba(248, 250, 252, 0.7);
-  --accent: #38bdf8;
-  --accent-strong: #0ea5e9;
-  --shadow-soft: 0 20px 45px rgba(2, 6, 23, 0.45);
+  --page-background: #f5f7fb;
+  --card-background: #ffffff;
+  --panel-background: rgba(84, 112, 191, 0.08);
+  --border-color: rgba(15, 23, 42, 0.15);
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --shadow-soft: 0 20px 45px rgba(15, 23, 42, 0.08);
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   color: var(--text-primary);
   background-color: var(--page-background);
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -24,11 +24,11 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #080b14, #0f172a 50%, #020617 100%);
+  background: radial-gradient(circle at top, #ffffff 0%, #edf1f7 45%, #e2e8f0 100%);
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 #root {
@@ -44,12 +44,13 @@ button {
   font-weight: 600;
   border: none;
   border-radius: 999px;
-  padding: 0.85rem 1.6rem;
+  padding: 0.85rem 1.8rem;
   background: var(--accent);
-  color: var(--text-primary);
+  color: #fff;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+  letter-spacing: 0.02em;
 }
 
 button:hover {
@@ -57,7 +58,7 @@ button:hover {
   transform: translateY(-1px);
 }
 
-button:active {
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
-  transform: translateY(0);
+button:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 2px;
 }
