@@ -8,14 +8,11 @@
 - Отримання значень через `FormData`
 - Обробка форми з `Form Actions`
 - Хук `useId`
+- ENV - import.meta.env.VITE_API_KEY;
 
 > Нагадати що в LMS є повний матеріал по роботі з всіма елементами форми
 
 ## HTTP-запити
-
-```text
-http://hn.algolia.com/api/v1/search
-```
 
 - Форма пошуку `SearchForm`
 - HTTP-запит при сабміті
