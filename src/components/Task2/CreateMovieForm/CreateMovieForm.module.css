@@ -1,0 +1,76 @@
+.form {
+  width: min(540px, 90vw);
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.fieldset {
+  padding: 1.25rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--panel-background);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.legend {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.label {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  background: #f8fafc;
+  color: var(--text-primary);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.04);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.option input {
+  accent-color: var(--accent);
+}
+
+.option:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.button {
+  align-self: flex-start;
+}

@@ -1,5 +1,9 @@
 // import OrderForm from "./OrderForm/OrderForm";
-import SearchForm from "./SearchForm/SearchForm";
+// import { OPENAI_TOKEN } from "../helpers/constnants";
+
+import { Toaster } from "react-hot-toast";
+import Task2 from "./Task2/Task2";
+import Task3 from "./Task3/Task3";
 
 export default function App() {
   return (
@@ -7,6 +11,11 @@ export default function App() {
       {/* <OrderForm /> */}
       {/* <OrderForm /> */}
       {/* <SearchForm /> */}
+      <Task3 />
+      <hr />
+      <Task2 />
+
+      <Toaster />
     </>
   );
 }
