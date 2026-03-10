@@ -5,6 +5,7 @@
  * - Очистити слухач при розмонтуванні
  */
 
+import { useEffect } from "react";
 import css from "./Sidebar.module.css";
 
 interface SidebarProps {
@@ -12,6 +13,32 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ onClose }: SidebarProps) {
+  // useEffect(() => {
+  //   console.log("Монтування");
+  // }, []);
+
+  // useEffect(() => {
+  //   return () => {
+  //     console.log("Розмонтування");
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    function handleClose(e: KeyboardEvent) {
+      console.log(e.code);
+      if (e.code === "Escape") {
+        onClose();
+      }
+    }
+    console.log("ДОДАТИ ПРОСЛУХОВУВАЧ");
+    document.addEventListener("keydown", handleClose);
+
+    return () => {
+      console.log("ВИДАЛИТИ ПРОСЛУХОВУВАЧ");
+      document.removeEventListener("keydown", handleClose);
+    };
+  }, []);
+
   return (
     <div className={css.wrapper}>
       <div className={css.sidebar}>
