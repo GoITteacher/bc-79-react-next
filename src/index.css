@@ -115,3 +115,7 @@ button:focus-visible {
     animation: logo-spin infinite 20s linear;
   }
 }
+
+li.selected {
+  background-color: silver;
+}

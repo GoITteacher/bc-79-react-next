@@ -17,13 +17,14 @@ export interface GetProductsResponse {
   totalPages: number;
   results: Product[];
 }
-export const getProducts = async (currentPage: number) => {
+export const getProducts = async (query: string, currentPage: number) => {
   const baseUrl = "https://food-boutique.b.goit.study/api";
   const endPoint = "/products";
   const url = baseUrl + endPoint;
 
   const params = {
     page: currentPage,
+    keyword: query,
   };
 
   const res = await axios.get<GetProductsResponse>(url, { params });

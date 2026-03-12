@@ -8,7 +8,7 @@ export interface Cocktail {
 }
 
 export const getRandomCocktails = async () => {
-  const baseUrl = "https://drinkify.b.goit.study/api/v3";
+  const baseUrl = "https://drinkify.b.goit.study/api/v1";
   const endPoint = "/cocktails/";
   const url = baseUrl + endPoint;
 

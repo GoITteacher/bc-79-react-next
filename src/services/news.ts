@@ -24,7 +24,7 @@ export const getArticles = async (query: string, page: number) => {
     q: query,
     page: page,
     pageSize: 6,
-    apiKey: import.meta.env.VITE_NEWS_API_KEY,
+    apiKey: "c8747511a2c34730a83caaff4f3693e7",
   };
 
   const res = await axios.get<NewsResponse>(url, { params });

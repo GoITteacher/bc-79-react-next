@@ -1,0 +1,64 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+
+  gap: 6px;
+}
+
+.pagination li {
+  display: flex;
+}
+
+.pagination li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+
+  cursor: pointer;
+  user-select: none;
+
+  background: #ffffff;
+
+  transition: all 0.2s ease;
+}
+
+.pagination li a:hover {
+  background: teal;
+  border-color: #d1d5db;
+}
+
+/* Глобальний клас бібліотеки */
+.pagination :global(.selected) a {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+/* disabled */
+.pagination :global(.disabled) a {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ... */
+.pagination :global(.break) a {
+  border: none;
+  background: transparent;
+  cursor: default;
+}
