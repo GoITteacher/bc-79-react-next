@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.77.2",
     "@tanstack/react-query-devtools": "^5.77.2",
+    "antd": "^6.3.2",
     "axios": "^1.9.0",
     "formik": "^2.4.6",
     "modern-normalize": "^3.0.1",
