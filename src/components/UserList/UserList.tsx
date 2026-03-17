@@ -84,7 +84,11 @@ const usersMockData = [
 ];
 
 const UserList = () => {
-  return <div className={css["user-list-container"]}>Hello</div>;
+  return (
+    <div className={css["user-list-container"]}>
+      <ul></ul>
+    </div>
+  );
 };
 
 export default UserList;
