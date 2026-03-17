@@ -1,3 +1,4 @@
+import { useState } from "react";
 import css from "./UserList.module.css";
 
 const usersMockData = [
@@ -84,9 +85,25 @@ const usersMockData = [
 ];
 
 const UserList = () => {
+  const [users, setUsers] = useState(usersMockData);
+  const [query, setQuery] = useState("");
+
+  const filteredUsers = users.filter((user) => user.name.includes(query));
+
   return (
     <div className={css["user-list-container"]}>
-      <ul></ul>
+      <input
+        type="text"
+        name="query"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+
+      <ul>
+        {filteredUsers.map((user) => {
+          return <li>{user.name}</li>;
+        })}
+      </ul>
     </div>
   );
 };

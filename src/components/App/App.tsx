@@ -1,28 +1,37 @@
 import { useState } from "react";
-import { useDebounce } from "use-debounce";
 import TaskList from "../TaskList/TaskList";
 import Modal from "../Modal/Modal";
 import TaskForm from "../TaskForm/TaskForm";
 import SearchBox from "../SearchBox/SearchBox";
 import SortFilter from "../SortFilter/SortFilter";
 import css from "./App.module.css";
-import UserList from "../UserList/UserList";
+import { useModal } from "../../hooks/useModal";
+import { useTasks } from "../../hooks/useTasks";
 
 export default function App() {
+  const [query, setQuery] = useState("");
+  const [isOpenModal, openModal, closeModal] = useModal();
+  const [tasks, isLoading] = useTasks(query);
+
   return (
     <div className={css.container}>
-      <UserList />
       <hr />
       <header className={css.header}>
-        <SearchBox value={""} onSearch={() => {}} />
+        <SearchBox value={query} onSearch={setQuery} />
         <SortFilter />
-        <button className={css.createButton} onClick={() => {}}>
+        <button className={css.createButton} onClick={openModal}>
           Create task
         </button>
       </header>
 
-      <strong className={css.loading}>Loading tasks...</strong>
-      <TaskList tasks={[]} />
+      {isLoading && <strong className={css.loading}>Loading tasks...</strong>}
+      {!isLoading && <TaskList tasks={tasks} />}
+
+      {isOpenModal && (
+        <Modal onClose={closeModal}>
+          <TaskForm onSuccess={() => {}}></TaskForm>
+        </Modal>
+      )}
     </div>
   );
 }

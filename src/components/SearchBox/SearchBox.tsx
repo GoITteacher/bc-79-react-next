@@ -6,5 +6,12 @@ interface SearchBoxProps {
 }
 
 export default function SearchBox({ value, onSearch }: SearchBoxProps) {
-  return <input type="text" className={css.searchInput} value={value} />;
+  return (
+    <input
+      type="text"
+      className={css.searchInput}
+      value={value}
+      onChange={(e) => onSearch(e.target.value)}
+    />
+  );
 }
