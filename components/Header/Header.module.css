@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f3c9a4;
+}
+
+.navigation {
+  display: flex;
+  list-style-type: none;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
