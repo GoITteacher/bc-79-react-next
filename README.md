@@ -22,9 +22,10 @@ npm install -D prettier eslint-config-prettier
 ## Маршрутизація
 
 - Серверна, клієнтська, гібридна
-- Файлова маршрутизація
+- Файлова маршрутизація.
+- Створення комопнентів
+- Що таке layout.
 - Навігація із `next/link`
-- Що таке layout. Метадані.
 
 ```shell
 localhost:3000 > app/page.tsx
