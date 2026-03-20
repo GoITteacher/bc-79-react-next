@@ -16,13 +16,13 @@ export default function AppHeader() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/posts">Posts</Link>
-          </li>
-          <li>
             <Link href="/pokemons">Pokemons</Link>
           </li>
           <li>
-            <Link href="/users">Users</Link>
+            <Link href="/students">Students</Link>
+          </li>
+          <li>
+            <Link href="/songs">Songs</Link>
           </li>
         </ul>
       </nav>
