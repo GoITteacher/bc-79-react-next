@@ -1,5 +1,11 @@
+import StudentList from "@/components/StudentList/StudentList";
+
 const Page = () => {
-  return <main>Page</main>;
+  return (
+    <main>
+      <StudentList />
+    </main>
+  );
 };
 
 export default Page;
