@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+}
+.sidebar {
+  width: 400px;
+  border: 1px solid teal;
+}
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+}
