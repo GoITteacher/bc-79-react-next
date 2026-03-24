@@ -33,6 +33,7 @@ export default function RecipeModal() {
             src={recipe.image}
             alt={recipe.name}
             loading="lazy"
+            width={200}
           />
           <span className={css.badge}>{recipe.difficulty}</span>
         </div>
