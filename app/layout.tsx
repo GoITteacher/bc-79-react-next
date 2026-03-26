@@ -1,27 +1,24 @@
-import { Roboto_Mono, Montserrat } from "next/font/google";
 import AppHeader from "@/components/AppHeader/AppHeader";
-import TanStackProvider from "@/components/TanStackProvider";
+
 import "./globals.css";
 import styles from "./layout.module.css";
-import { Metadata } from "next";
+import TanStackProvider from "@/components/TanStackProvider";
+import { Roboto, Montserrat } from "next/font/google";
+import clsx from "clsx";
 
-const robotoFont = Roboto_Mono({
-  variable: "--roboto-font",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+const robotoFont = Roboto({
+  weight: ["400", "500", "800", "900"],
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
-const montserratFont = Montserrat({
-  variable: "--montserrat-font",
-  subsets: ["cyrillic"],
-  weight: ["600", "700", "800"],
+const monserratFont = Montserrat({
+  weight: ["400", "500", "800", "900"],
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-monserrat",
+  display: "swap",
 });
-
-export const metadata: Metadata = {
-  title: "Home Page from Layout",
-  description: "Descrption for Home page",
-};
 
 export default function RootLayout({
   children,
@@ -30,14 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <TanStackProvider>
-        <body className={`${robotoFont.variable} ${montserratFont.variable}`}>
+      <body className={clsx(robotoFont.variable, monserratFont.variable)}>
+        <TanStackProvider>
           <div className={styles.shell}>
             <AppHeader />
             <main className={styles.content}>{children}</main>
           </div>
-        </body>
-      </TanStackProvider>
+        </TanStackProvider>
+      </body>
     </html>
   );
 }

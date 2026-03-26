@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: clamp(2.5rem, 6vw, 4rem);
   color: var(--color-text);
+  font: var(--font-roboto);
 }
 
 .hero {
@@ -56,7 +57,7 @@
 }
 
 .title {
-  font-family: var(--roboto-font);
+  font-family: var(--font-monserrat);
   font-size: clamp(2.25rem, 6vw, 3.5rem);
   line-height: 1.1;
   max-width: 22ch;

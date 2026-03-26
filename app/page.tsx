@@ -1,33 +1,10 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
-  // title: "Home Page from page.tsx",
-  // description: "Home Page for youtube.com",
-  // openGraph: {
-  //   title: "Youtube",
-  //   description: "Home page Youtube",
-  //   url: "http://localhost:3000",
-  //   siteName: "Youtube",
-  //   images: [
-  //     {
-  //       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOrvhs-Kqr0q0_n9Rv_c-x3mv81-kYWyDGhw&s",
-  //       width: "550",
-  //       height: "664",
-  //       alt: "Cat",
-  //     },
-  //   ],
-  // },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "Home page for Twitter",
-  //   description: "Home page for Twitter",
-  //   images: [
-  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOrvhs-Kqr0q0_n9Rv_c-x3mv81-kYWyDGhw&s",
-  //   ],
-  // },
+  title: "Home Page",
+  description: "This is Home Page",
 };
 
 export default function Home() {
@@ -39,19 +16,12 @@ export default function Home() {
           Discover beautiful products at a glance
         </h1>
 
-        <Image
-          src="https://cdn.pixabay.com/photo/2025/08/21/09/51/rouen-cathedral-9787080_1280.jpg"
-          alt="Cat"
-          width={1200}
-          height={1200}
-        />
-
         <p className={styles.subtitle}>
           Browse curated categories, inspect detailed descriptions, and learn
           how TanStack Query keeps everything snappy.
         </p>
         <div className={styles.actions}>
-          <Link className={styles.primaryAction} href="/products/beauty">
+          <Link className={styles.primaryAction} href="/products">
             Explore products
           </Link>
           <a
