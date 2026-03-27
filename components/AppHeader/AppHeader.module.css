@@ -6,6 +6,10 @@
   margin-bottom: 20px;
   border-bottom: 1px solid black;
 }
+.dark-mode {
+  background-color: #282828;
+  color: white;
+}
 
 .nav {
   display: flex;
