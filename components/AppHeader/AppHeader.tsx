@@ -2,11 +2,18 @@
 
 import Link from "next/link";
 import css from "./AppHeader.module.css";
-import { selectChangeLang, selectLang, useLangStore } from "@/stores/langStore";
+import { useAuthStore } from "@/stores/authStore";
+import { logout } from "@/lib/auth";
 
 export default function AppHeader() {
-  const lang = useLangStore(selectLang);
-  const changeLang = useLangStore(selectChangeLang);
+  const user = useAuthStore((s) => s.user);
+  const isAuth = useAuthStore((s) => s.isAuth);
+  const clearAuth = useAuthStore((s) => s.clearAuth);
+
+  const handleLogout = async () => {
+    await logout();
+    clearAuth();
+  };
 
   return (
     <header className={css.header}>
@@ -21,15 +28,17 @@ export default function AppHeader() {
           <Link href="/bucket">Bucket</Link>
         </li>
       </ul>
-      <select
-        name="lang"
-        value={lang}
-        onChange={(e) => changeLang(e.target.value)}
-      >
-        <option value="en">En</option>
-        <option value="ua">Ua</option>
-        <option value="pl">Pl</option>
-      </select>
+
+      <div>
+        {isAuth && (
+          <div>
+            <p>Hello {user?.name}</p>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        )}
+
+        {!isAuth && <Link href="/auth/login">Sign In</Link>}
+      </div>
     </header>
   );
 }

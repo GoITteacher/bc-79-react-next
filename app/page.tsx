@@ -4,7 +4,6 @@ import Lang from "@/components/Lang/Lang";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Lang />
       <main>
         <ol>
           <li>
