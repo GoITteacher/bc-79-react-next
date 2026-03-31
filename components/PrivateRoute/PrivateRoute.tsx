@@ -1,16 +1,18 @@
 "use client";
-
 import { useUserStore } from "@/store/userStore";
-import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-export const usePrivatePage = () => {
+const PrivateRoute = () => {
   const router = useRouter();
   const isAuth = useUserStore((s) => s.isAuth);
-
   useEffect(() => {
-    if (isAuth === false) {
+    if (!isAuth) {
       router.push("/");
     }
   }, [isAuth]);
+
+  return null;
 };
+
+export default PrivateRoute;

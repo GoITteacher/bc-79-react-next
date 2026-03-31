@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { globalApi } from "../../globalApi";
-import { getAuthHeaders, getAxiosErrorPayload } from "../_helpers/requestHelpers";
+
+import {
+  getAuthHeaders,
+  getAxiosErrorPayload,
+} from "../_helpers/requestHelpers";
+import { globalApi } from "../globalApi";
 
 export const POST = async (request: NextRequest) => {
   const headers = await getAuthHeaders();

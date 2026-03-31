@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import styles from "./news.module.css";
-import { usePrivatePage } from "@/components/PrivatePage/PublicPage";
 
 const newsStories = [
   {

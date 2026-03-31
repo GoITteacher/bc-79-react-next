@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import styles from "./tasks.module.css";
+import PrivateRoute from "@/components/PrivateRoute/PrivateRoute";
 
 const tasks = [
   {

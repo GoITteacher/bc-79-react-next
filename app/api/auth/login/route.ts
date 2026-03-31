@@ -6,14 +6,14 @@ import { AxiosError } from "axios";
 
 export const POST = async (request: NextRequest) => {
   try {
-    const userData = await request.json();
-    const res = await globalApi.post("/auth/login", userData);
+    const body = await request.json();
+    const res = await globalApi.post("/auth/login", body);
 
     const cookieStore = await cookies();
-    const setCookies = res.headers["set-cookie"];
+    const cookiesStr = res.headers["set-cookie"];
 
-    if (setCookies) {
-      const cookieArr = Array.isArray(setCookies) ? setCookies : [setCookies];
+    if (cookiesStr) {
+      const cookieArr = Array.isArray(cookiesStr) ? cookiesStr : [cookiesStr];
 
       for (const cookie of cookieArr) {
         const parsedCookie = parse(cookie);

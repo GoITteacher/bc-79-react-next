@@ -5,11 +5,13 @@ import { NextResponse } from "next/server";
 export const POST = async () => {
   const cookieStore = await cookies();
 
-  await globalApi.post("/auth/logout", {
-    headers: {
-      Cookie: cookieStore.toString(),
-    },
-  });
+  try {
+    await globalApi.post("/auth/logout", {
+      headers: {
+        Cookie: cookieStore.toString(),
+      },
+    });
+  } catch {}
 
   cookieStore.delete("accessToken");
   cookieStore.delete("refreshToken");

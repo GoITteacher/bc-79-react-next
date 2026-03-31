@@ -2,23 +2,27 @@
 
 import Link from "next/link";
 import styles from "./page.module.css";
+import PhotoPicker from "@/components/PhotoPicker/PhotoPicker";
 
 const highlightCards = [
   {
     title: "Task board",
-    description: "Track priorities, due dates, and blockers for every project sprint.",
+    description:
+      "Track priorities, due dates, and blockers for every project sprint.",
     link: "/tasks",
     badge: "In progress",
   },
   {
     title: "Notes vault",
-    description: "Capture briefs, approvals, and research snippets in secure, searchable notes.",
+    description:
+      "Capture briefs, approvals, and research snippets in secure, searchable notes.",
     link: "/notes",
     badge: "Fresh",
   },
   {
     title: "News feed",
-    description: "Share program updates, testimonials, and product stories with the team.",
+    description:
+      "Share program updates, testimonials, and product stories with the team.",
     link: "/news",
     badge: "Live",
   },
@@ -58,10 +62,13 @@ export default function Home() {
         <section className={styles.hero}>
           <p className={styles.tag}>Client demo</p>
           <div className={styles.heroCopy}>
-            <h1>Everything you need to stay confident with news, tasks, and notes.</h1>
+            <h1>
+              Everything you need to stay confident with news, tasks, and notes.
+            </h1>
             <p>
-              This placeholder experience mirrors the protected data from the demo server. It
-              previews how updates, sweeps, and private notes will look once the APIs arrive.
+              This placeholder experience mirrors the protected data from the
+              demo server. It previews how updates, sweeps, and private notes
+              will look once the APIs arrive.
             </p>
           </div>
           <div className={styles.ctaGroup}>
@@ -72,6 +79,11 @@ export default function Home() {
               Read News
             </Link>
           </div>
+
+          <div>
+            <PhotoPicker />
+          </div>
+
           <div className={styles.stats}>
             {stats.map((stat) => (
               <div className={styles.stat} key={stat.label}>
@@ -85,7 +97,10 @@ export default function Home() {
         <section className={styles.gridSection}>
           <div className={styles.gridHeader}>
             <h2>Quick links</h2>
-            <p>Every area mirrors the server routes so we can swap in real data later.</p>
+            <p>
+              Every area mirrors the server routes so we can swap in real data
+              later.
+            </p>
           </div>
           <div className={styles.grid}>
             {highlightCards.map((card) => (
@@ -106,7 +121,9 @@ export default function Home() {
         <section className={styles.previewSection}>
           <div className={styles.previewHeader}>
             <h2>Live previews</h2>
-            <p>Fake data that matches the structures defined in the server docs.</p>
+            <p>
+              Fake data that matches the structures defined in the server docs.
+            </p>
           </div>
           <div className={styles.previewList}>
             {previews.map((item) => (
